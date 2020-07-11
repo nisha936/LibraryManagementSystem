@@ -33,6 +33,14 @@
 </head>
 <body>
     <header>
+        <?php 
+           $result=mysqli_query($db,"SELECT COUNT(seen) as total FROM message WHERE seen='no' and sender='student';  ");
+           $count=mysqli_fetch_assoc($result);
+
+           $result1=mysqli_query($db,"SELECT COUNT(status) as total FROM admin WHERE status='' ; ");
+          
+            $count1=mysqli_fetch_assoc($result1);
+         ?>
 	<nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 
@@ -40,7 +48,7 @@
                 
                     <a class="navbar-brand active" style="color: white; " href="index.php">LIBRARY MANAGEMENT SYSTEM</a>
                 </div>
-                <ul class="nav navbar-nav" style="float: right;">
+                <ul class="nav navbar-nav" style="float: left;">
                     <li><a href="index.php" style="text-decoration: none;">HOME</a></li>
                     <li><a href="books.php" style="text-decoration: none;">BOOKS</a></li>
                     
@@ -56,7 +64,8 @@
                 {?>
                     
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="message.php"><span class="glyphicon glyphicon-envelope"></span> <span class="badge bg-green">0</span></a></li>
+                        <li><a href="admin-status.php"><span class="glyphicon glyphicon-user"></span> <span class="badge bg-green"><?php echo $count1['total']; ?></span></a></li>
+                        <li><a href="message.php"><span class="glyphicon glyphicon-envelope"></span> <span class="badge bg-green"><?php echo $count['total']; ?></span></a></li>
                         <li><a href="adminprofile.php">
                             <div style="color: black">
                         <?php
@@ -73,7 +82,7 @@
                 else
                 {?>
                      <ul class="nav navbar-nav navbar-right">
-                    <li><a href="login.php"><i class="fa fa-sign-in">LOGIN</i></a></li>
+                    <li><a href="../login.php"><i class="fa fa-sign-in">LOGIN</i></a></li>
                    
                     <li><a href="registration.php"><i class="fa fa-user">SIGN UP</i></a></li>
                     </ul>

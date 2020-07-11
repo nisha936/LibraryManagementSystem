@@ -44,7 +44,7 @@
             if(isset($_POST['submit']))
             {
                 $count=0;
-                $result=mysqli_query($db,"SELECT * FROM `admin` WHERE username='$_POST[username]' && password='$_POST[password]';");
+                $result=mysqli_query($db,"SELECT * FROM `admin` WHERE username='$_POST[username]' && password='$_POST[password]' and status='yes';");
 
                 $row= mysqli_fetch_assoc($result);
 

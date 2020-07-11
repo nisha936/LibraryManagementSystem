@@ -33,6 +33,10 @@
 </head>
 <body>
     <header>
+        <?php 
+           $result=mysqli_query($db,"SELECT COUNT(seen) as total FROM message WHERE seen='no' and username='$_SESSION[login_user]' and sender='admin';  ");
+           $count=mysqli_fetch_assoc($result);
+         ?>
 	<nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 
@@ -55,7 +59,7 @@
                 {?>
                     
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="message.php"><span class="glyphicon glyphicon-envelope"></span> <span class="badge bg-green">0</span></a></li>
+                        <li><a href="message.php"><span class="glyphicon glyphicon-envelope"></span> <span class="badge bg-green"><?php echo $count['total']; ?></span></a></li>
                         <li><a href="studentprofile.php">
                             <div style="color: black">
                         <?php
@@ -72,7 +76,7 @@
                 else
                 {?>
                      <ul class="nav navbar-nav navbar-right">
-                    <li><a href="login.php"><i class="fa fa-sign-in">LOGIN</i></a></li>
+                    <li><a href="../login.php"><i class="fa fa-sign-in">LOGIN</i></a></li>
                    
                     <li><a href="registration.php"><i class="fa fa-user">SIGN UP</i></a></li>
                     </ul>
