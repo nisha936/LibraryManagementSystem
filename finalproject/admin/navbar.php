@@ -29,6 +29,11 @@
             .img_circle {
                 border-radius:50%; 
             }
+            .nav>li>a {
+                 position: relative;
+                display: block;
+                     padding: 10px 5px; 
+                }
         </style>
 </head>
 <body>

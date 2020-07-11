@@ -29,6 +29,11 @@
             .img_circle {
                 border-radius:50%; 
             }
+            .nav>li>a {
+                 position: relative;
+                display: block;
+                     padding: 10px 5px; 
+                }
         </style>
 </head>
 <body>
@@ -44,7 +49,7 @@
                 
                     <a class="navbar-brand active" style="color: white; " href="index.php">LIBRARY MANAGEMENT SYSTEM</a>
                 </div>
-                <ul class="nav navbar-nav" style="float: right;">
+                <ul class="nav navbar-nav" style="float: left;">
                     <li><a href="index.php" style="text-decoration: none;">HOME</a></li>
                     <li><a href="books.php" style="text-decoration: none;">BOOKS</a></li>
                     
