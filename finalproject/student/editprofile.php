@@ -47,15 +47,7 @@ include 'connection.php';
 		}
 	?>
 
-	<div class="profile_information" style="text-align: center;">
-		<!-- <span style="color: white;">Welcome,</span>
-		<h6 style="color: white;">
-			<?php
-			echo $_SESSION['login_user'];
-			?>
-		</h6> -->
-
-	</div>
+	
 	<form action="" method="post" enctype="multipart/form-data">
 
 		<input class="form-control" type="file" name="file"><br>

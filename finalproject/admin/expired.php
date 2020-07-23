@@ -200,8 +200,7 @@ include "connection.php";
                   }
 
                   $x=date("Y-m-d");
-                  $d=
-                  mysqli_query($db,"INSERT INTO `fine` VALUES ('$_POST[username]','$_POST[bookid]','$x','$day','$fine','not paid'); ");
+                  $d=mysqli_query($db,"INSERT INTO `fine` VALUES ('$_POST[username]','$_POST[bookid]','$x','$day','$fine','not paid'); ");
 
 
                    $variable1='<p style="background-color:green; color:black;">Returned.</p>';

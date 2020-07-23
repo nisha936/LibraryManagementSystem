@@ -50,15 +50,14 @@
 <body>
 	<footer style="background-color: black;">
 
-		<h4 style="color: white; text-align: center;">Contact us at:</h4>
+		<h4 style="color: white; text-align: center;padding: 10px;">Contact us at:</h4>
 		<div style="margin: 0px 630px">
 			<a href="https://www.facebook.com" class="fa fa-facebook"></a>
 			<a href="https://www.instagram.com" class="fa fa-instagram"></a>
 			<a href="https://www.google.com" class="fa fa-google"></a>
 			</div>
-			<p style="color: white; text-align: center;">
-		                                   Email: nishashrestha936@gmail.com <br>
-                        Mobile: 9803887285
+			<p style="color: white; text-align: center; padding: 10px;">Email: <a href="https://librarymanagementsystem.lms@gmail.com" target="_blank">librarymanagementsystem.lms@gmail.com<br>
+                        
                     </p>
 	</footer>
 </body>

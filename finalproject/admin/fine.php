@@ -164,6 +164,7 @@ include "connection.php";
                    echo "<th>"; echo " Days "; echo "</th>";
                    echo "<th>"; echo " Fine in Rs. "; echo "</th>";
                    echo "<th>"; echo " Status "; echo "</th>"; 
+                   echo "<th>"; echo " Action "; echo "</th>"; 
                    
                 echo "</tr>";
 
@@ -175,10 +176,9 @@ include "connection.php";
                             echo "<td>"; echo $row['returneddate']; echo "</td>";
                             echo "<td>"; echo $row['days']; echo "</td>";
                             echo "<td>"; echo $row['studentfine']; echo "</td>";
-                            echo "<td>"; echo $row['status']; echo "</td>";
-                    echo "</tr>";
-                }
-
+                            echo "<td>"; echo $row['status']; echo "</td>"; 
+                    echo "</tr>";  
+                    }       
                 echo "</table>";
                 }
             }
